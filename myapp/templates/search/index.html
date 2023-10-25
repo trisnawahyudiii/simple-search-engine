@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block content %}
+<section
+  class="w-full flex flex-col items-center justify-center text-center h-[calc(100vh-64px)]"
+>
+  <h1 class="text-xl capitalize font-semibold mb-3">
+    wellcome to search engine
+  </h1>
+
+  <form action="/" method="post" class="relative w-1/2">
+    <input
+      type="text"
+      id="searchQuery"
+      name="searchQuery"
+      placeholder="html, css, javascript, etc."
+      class="border border-slate-400 px-4 py-2 bg-white focus:ring-1 focus:border-none focus:ring-blue-200 rounded-md w-full"
+    />
+    <button
+      class="absolute right-0 top-0 -translate-x-[100%] translate-y-[35%]"
+    >
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+</section>
+{% endblock %}

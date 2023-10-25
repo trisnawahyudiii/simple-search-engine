@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block content %}
+<main class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="font-bold text-xl">Documents</h1>
+  </div>
+  <div class="container mx-auto flex flex-col items-center gap-3">
+    {% for document in documents %}
+    <div class="bg-white rounded-md shadow w-1/2 p-5">{{document[1]}}</div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

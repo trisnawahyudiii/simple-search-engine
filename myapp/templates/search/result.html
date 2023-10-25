@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block content %}
+<section
+  class="w-full flex flex-col items-start justify-start p-12 h-[calc(100vh-64px)]"
+>
+  <form action="/" method="post" class="relative w-1/2">
+    <input
+      type="text"
+      id="searchQuery"
+      name="searchQuery"
+      placeholder="html, css, javascript, etc."
+      class="border border-slate-400 px-4 py-2 bg-white focus:ring-1 focus:border-none focus:ring-blue-200 rounded-md w-full"
+    />
+    <button class="absolute right-0 top-0 -translate-x-[50%] translate-y-[35%]">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+  <div class="w-full mt-3">
+    <h2 class="font-xl py-3">hasil pencarian : <b>{{query}}</b></h2>
+    <p>{{document[1]}}</p>
+  </div>
+</section>
+{% endblock %}
